@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-    <title>Grad School HTML5 Template</title>
+    <title>Online Beratung Akademie</title>
     
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -181,7 +181,7 @@ https://templatemo.com/tm-557-grad-school
         <div class="col-md-7 col-xs-12">
           <div class="continer centerIt">
             <div>
-              <h4>Take <em>any online course</em> and win $326 for your next class</h4>
+              <h4>Fill In The <em>Formuler</em> and be one of our community</h4>
               <div class="counter">
 
                 <div class="days">
@@ -211,10 +211,16 @@ https://templatemo.com/tm-557-grad-school
         <div class="col-md-5">
           <div class="right-content">
             <div class="top-content">
-              <h6>Register your free account and <em>get immediate</em> access to online courses</h6>
+              <h6>Register  <em>free </em>and get immediate access to our consultants</h6>
             </div>
             <form id="contact" action="" method="get">
               <div class="row">
+                <div class="col-md-12">
+                  <fieldset>
+                    <p>Gender:</p>
+                    <input type="radio" name="Man"  >
+                  </fieldset>
+                </div>
                 <div class="col-md-12">
                   <fieldset>
                     <input name="name" type="text" class="form-control" id="name" placeholder="Your Name" required="">
@@ -232,7 +238,7 @@ https://templatemo.com/tm-557-grad-school
                 </div>
                 <div class="col-md-12">
                   <fieldset>
-                    <button type="submit" id="form-submit" class="button">Get it now</button>
+                    <button type="submit" id="form-submit" class="button">Next</button>
                   </fieldset>
                 </div>
               </div>
@@ -479,9 +485,8 @@ https://templatemo.com/tm-557-grad-school
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <p><i class="fa fa-copyright"></i> Copyright 2020 by Grad School  
-          
-           | Design: <a href="https://templatemo.com" rel="sponsored" target="_parent">TemplateMo</a></p>
+          <p><i class="fa fa-copyright"></i> Copyright 2022 by Online Beratung akademie
+          </p>
         </div>
       </div>
     </div>
@@ -500,6 +505,13 @@ https://templatemo.com/tm-557-grad-school
     <script src="assets/js/slick-slider.js"></script>
     <script src="assets/js/custom.js"></script>
     <script>
+      const formSubm = document.getElementById('contact')
+      formSubm.addEventListener('submit',(e)=>{
+        e.preventDefault()
+      })
+
+
+
         //according to loftblog tut
         $('.nav li:first').addClass('active');
 
