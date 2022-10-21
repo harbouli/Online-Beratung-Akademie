@@ -282,7 +282,7 @@ are here for you. Don't hesitate to contact us.</p>
             <div class="top-content">
               <h6>Register  <em>free </em>and get immediate access to our consultants</h6>
             </div>
-            <form id="contact" method="POST">
+            <form id="contact" action="thx.php" method="POST">
               <div class="row">
                 <div class="col-md-12">
                  
@@ -468,21 +468,21 @@ is Frankfurt; the largest urban area is the Ruhr.</p>
                 	
                     Please visit https://templatemo.com/contact page -->
                     
-          <form id="contact" action="" method="post">
+          <form id="contact" action="thx.php" method="post">
             <div class="row">
               <div class="col-md-6">
                   <fieldset>
-                    <input name="name" type="text" class="form-control" id="name" placeholder="Your Name" required="">
+                    <input name="name_contact" type="text" class="form-control" id="name" placeholder="Your Name" required="">
                   </fieldset>
                 </div>
                 <div class="col-md-6">
                   <fieldset>
-                    <input name="email" type="text" class="form-control" id="email" placeholder="Your Email" required="">
+                    <input name="email_contact" type="text" class="form-control" id="email" placeholder="Your Email" required="">
                   </fieldset>
                 </div>
               <div class="col-md-12">
                 <fieldset>
-                  <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
+                  <textarea name="message_contact" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
                 </fieldset>
               </div>
               <div class="col-md-12">
