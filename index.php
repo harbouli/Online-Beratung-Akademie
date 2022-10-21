@@ -1,3 +1,55 @@
+<?php 
+
+
+$Your_email = "info@onlineberatungakademie.com";
+
+
+    if (isset($_POST["Touch"])) {
+        $name = $_POST["name"];
+        $email = $_POST["email"];
+        $message_customer = $_POST["message"];
+      
+        $subject = 'your subject';
+
+        $message =
+        "
+        customer Name : $name
+
+        Email: $email
+
+        Message: $email
+
+";
+    }
+
+    if (isset($_POST["consultants"])) {
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $phone_number = $_POST["phone_number"];
+    
+    $subject = 'your subject';
+
+    $message =
+    "
+    customer Name : $name
+   
+    Email: $email
+   
+    Phone Number: $phone_number
+   
+   
+   ";
+
+    }
+if (isset($_POST["consultants"]) || isset($_POST["Touch"])) {
+$headers = "From: $Your_email". phpversion();
+mail($Your_email, $subject, $message, $headers);
+
+    }
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,9 +74,7 @@
 <!--
     
 TemplateMo 557 Grad School
-
 https://templatemo.com/tm-557-grad-school
-
 -->
   </head>
 
@@ -232,7 +282,7 @@ are here for you. Don't hesitate to contact us.</p>
             <div class="top-content">
               <h6>Register  <em>free </em>and get immediate access to our consultants</h6>
             </div>
-            <form id="contact" action="" method="get">
+            <form id="contact" method="POST">
               <div class="row">
                 <div class="col-md-12">
                  
@@ -249,12 +299,12 @@ are here for you. Don't hesitate to contact us.</p>
                 </div>
                 <div class="col-md-12">
                   <fieldset>
-                    <input name="phone-number" type="text" class="form-control" id="phone-number" placeholder="Your Phone Number" required="">
+                    <input name="phone_number" type="text" class="form-control" id="phone-number" placeholder="Your Phone Number" required="">
                   </fieldset>
                 </div>
                 <div class="col-md-12">
                   <fieldset>
-                    <button type="submit" id="form-submit" class="button">Send</button>
+                    <button type="submit" name="consultants" id="form-submit" class="button">Send</button>
                   </fieldset>
                 </div>
               </div>
@@ -437,7 +487,7 @@ is Frankfurt; the largest urban area is the Ruhr.</p>
               </div>
               <div class="col-md-12">
                 <fieldset>
-                  <button type="submit" id="form-submit" class="button">Send Message Now</button>
+                  <button type="submit" name="Touch" id="form-submit" class="button">Send Message Now</button>
                 </fieldset>
               </div>
             </div>
@@ -476,10 +526,10 @@ is Frankfurt; the largest urban area is the Ruhr.</p>
     <script src="assets/js/slick-slider.js"></script>
     <script src="assets/js/custom.js"></script>
     <script>
-      const formSubm = document.getElementById('contact')
-      formSubm.addEventListener('submit',(e)=>{
-        e.preventDefault()
-      })
+      // const formSubm = document.getElementById('contact')
+      // formSubm.addEventListener('submit',(e)=>{
+      //   e.preventDefault()
+      // })
 
 
 
@@ -534,3 +584,5 @@ is Frankfurt; the largest urban area is the Ruhr.</p>
     </script>
 </body>
 </html>
+
+
